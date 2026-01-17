@@ -27,6 +27,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
+    // eslint-disable-next-line
   }, [lastScrollY]);
 
   // If menu is OPEN, force navbar to show (so you can see the X button)
