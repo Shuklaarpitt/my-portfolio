@@ -1,4 +1,3 @@
-/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
@@ -32,37 +31,25 @@ header, section {
   padding: 60px 8%;
 }
 
-/* --- Header / Hero (Fixed Top Gap) --- */
+/* --- Header / Hero --- */
 header {
-  margin-top: 0; /* CHANGED: Pulls the section all the way to the top */
-  padding-top: 140px; /* ADDED: Pushes the TEXT down so it's not hidden behind the navbar */
-  min-height: 100vh; /* CHANGED: Makes sure it fills the full screen height */
+  margin-top: 0; /* Pulls the section all the way to the top */
+  padding-top: 140px; /* Pushes the TEXT down so it's not hidden behind the navbar */
+  min-height: 100vh; /* Makes sure it fills the full screen height */
   
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  
-  /* Keep your background settings */
   background: radial-gradient(circle at 30% 50%, #1a1a1a 0%, #080808 70%);
   position: relative;
   overflow: hidden;
-  
-  /* Keep global padding but override top */
   padding-left: 8%;
   padding-right: 8%;
   padding-bottom: 60px;
 }
 
-/* --- Header / Hero --- */
-header {
-  /* ... your existing header styles ... */
-  background: radial-gradient(circle at 30% 50%, #1a1a1a 0%, #080808 70%);
-  position: relative;
-  /* ... other styles ... */
-}  
-
-/* --- Fix Transition: Fade Out Effect --- */
+/* --- Fade Out Effect --- */
 header::after {
   content: '';
   position: absolute;
@@ -72,7 +59,7 @@ header::after {
   height: 150px; /* Height of the fade */
   background: linear-gradient(to bottom, transparent, var(--bg-color)); /* Fades to black */
   z-index: 1; /* Sits on top of particles but below text */
-  pointer-events: none; /* Lets you still click things through it */
+  pointer-events: none; 
 }
 
 /* Ensure Text sits ON TOP of the particles */
@@ -81,29 +68,28 @@ header::after {
   position: relative;
 }
 
-/* Restoring the "YOO! I AM A CODER" style */
+/* "YOO! I AM A CODER" style */
 .header-text p {
-  font-size: 1.5rem; /* Bigger, readable size */
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #fff; /* Bright white */
+  color: #fff;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-/* Restoring the Massive Headline */
 .header-text h1 {
-  font-size: 5rem; /* HUGE font size (was 3rem) */
+  font-size: 5rem; 
   line-height: 1.1;
   font-weight: 800;
   color: #fff;
-  font-family: sans-serif; /* Ensures blocky, strong font */
+  font-family: sans-serif;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* The "Arpit" Color Pop */
 .header-text span {
-  color: var(--primary-color); /* The #ff004f Pink */
+  color: var(--primary-color);
   text-shadow: 0px 0px 20px rgba(255, 0, 79, 0.4); /* Glowing effect */
 }
 
@@ -126,7 +112,7 @@ header::after {
   }
   
   .header-text h1 {
-    font-size: 3.5rem; /* Smaller on mobile but still big */
+    font-size: 3.5rem;
   }
 
   .header-text p {
@@ -184,7 +170,6 @@ header::after {
 .string { color: #f1fa8c; }
 .brace { color: #ff79c6; }
 
-/* Blinking Cursor */
 .cursor {
   animation: blink 1s step-end infinite;
   display: inline-block;
@@ -196,7 +181,6 @@ header::after {
   50% { opacity: 0; }
 }
 
-/* Mobile Fix for Header */
 @media (max-width: 768px) {
   header {
     flex-direction: column-reverse; /* Put code on top or bottom */
@@ -205,36 +189,36 @@ header::after {
     padding-top: 40px;
   }
   .code-window {
-    width: 90%; /* Make it fit mobile */
+    width: 90%;
     margin-bottom: 40px;
   }
 }
 
-/* --- About Section (Scaled Up) --- */
+/* --- About Section --- */
 .about-container {
   display: flex;
   align-items: center;
-  gap: 80px; /* Increased gap for a cleaner look */
+  gap: 80px;
   
-  /* Keep the overlap effect we added earlier */
+  /* Keep the overlap effect */
   position: relative;
   z-index: 2;
-  margin-top: -60px; /* Pull it up slightly more */
+  margin-top: -60px;
 }
 
 .about-img {
-  width: 350px; /* Increased from 300px */
+  width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  border: 8px solid #222; /* Thicker border to stand out against background */
+  border: 8px solid #222;
   box-shadow: 0 0 30px rgba(255, 0, 79, 0.2); /* Subtle pink glow */
 }
 
 .about-text {
   flex: 1;
-  background: rgba(30, 30, 30, 0.6); /* Semi-transparent card background */
-  padding: 40px; /* More internal spacing */
+  background: rgba(30, 30, 30, 0.6);
+  padding: 40px;
   border-radius: 20px;
   border: 1px solid #333;
   backdrop-filter: blur(5px); /* Blurs the background behind text */
@@ -242,16 +226,15 @@ header::after {
 
 .about-text h2 {
     margin-bottom: 25px;
-    font-size: 2.5rem; /* Bigger Heading */
+    font-size: 2.5rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* The Paragraph - The most important part to fix "smallness" */
 .about-text p {
-  font-size: 1.25rem; /* Increased from 1.1rem (Medium-Large size) */
-  line-height: 1.8; /* More spacing between lines for readability */
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: #d0d0d0;
   font-weight: 300;
 }
@@ -261,11 +244,10 @@ header::after {
   font-weight: 600;
 }
 
-/* Mobile Fixes */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
-    margin-top: 0; /* Remove overlap on mobile */
+    margin-top: 0;
     gap: 40px;
   }
   
@@ -275,11 +257,11 @@ header::after {
   }
   
   .about-text p {
-    font-size: 1.1rem; /* Keep readable on mobile */
+    font-size: 1.1rem;
   }
 }
 
-/* --- Projects Section (Overhauled) --- */
+/* --- Projects Section --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -315,7 +297,7 @@ header::after {
 
 .folder-icon i {
   font-size: 2.5rem;
-  color: var(--primary-color); /* Pink Folder */
+  color: var(--primary-color);
 }
 
 .links a {
@@ -349,11 +331,11 @@ header::after {
   margin-bottom: 25px;
 }
 
-/* --- Tech Stack Pills (The little badges) --- */
+/* --- Tech Stack Pills --- */
 .tech-stack {
   display: flex;
   gap: 15px;
-  font-family: monospace; /* Code font looks cool */
+  font-family: monospace;
   font-size: 0.9rem;
   color: #888;
 }
@@ -363,23 +345,23 @@ header::after {
 }
 
 .project-card:hover .tech-stack span {
-    color: #fff; /* Light up on hover */
+    color: #fff;
 }
 
 /* --- Skills Section (Symmetric & Centered) --- */
 .skills-grid {
-  display: flex;             /* The Magic Fix: Uses Flexbox instead of Grid */
-  flex-wrap: wrap;           /* Allows items to wrap to next line */
-  justify-content: center;   /* CRITICAL: Centers everything perfectly */
-  gap: 30px;                 /* Space between cards */
+  display: flex;             
+  flex-wrap: wrap;           
+  justify-content: center;   
+  gap: 30px;                 
   margin-top: 40px;
   padding: 0 20px;
 }
 
 .skill-card {
-  flex: 0 1 250px;           /* Flex-grow: 0, Flex-shrink: 1, Basis: 250px */
-  min-width: 250px;          /* Ensures cards don't get too small */
-  max-width: 300px;          /* Ensures cards don't get too big */
+  flex: 0 1 250px;           
+  min-width: 250px;          
+  max-width: 300px;          
   
   background: rgba(255, 255, 255, 0.03);
   padding: 40px 20px;
@@ -399,7 +381,7 @@ header::after {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--primary-color);
   box-shadow: 0 0 25px rgba(255, 0, 79, 0.4);
-  z-index: 10; /* Ensures hovered card floats ABOVE neighbors */
+  z-index: 10; 
 }
 
 /* Icon Box */
@@ -451,15 +433,11 @@ header::after {
 }
 
 
-/* --- Contact Section (Fixed Spacing) --- */
+/* --- Contact Section --- */
 .contact-section {
   /* Override global padding: Less space on top */
   padding: 50px 8% 100px 8% !important; 
-  
-  /* Remove min-height if it's too tall */
   min-height: auto; 
-  
-  /* Keep layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -505,7 +483,7 @@ header::after {
 .info-item i {
   font-size: 1.5rem;
   color: var(--primary-color);
-  width: 30px; /* Aligns icons vertically */
+  width: 30px;
   text-align: center;
 }
 
@@ -525,7 +503,6 @@ header::after {
   margin-bottom: 20px;
 }
 
-/* Modern Inputs */
 input, textarea {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -564,7 +541,7 @@ button[type="submit"]:hover {
   box-shadow: 0 5px 15px rgba(255, 0, 79, 0.4);
 }
 
-/* --- Footer (Neon Upgrade) --- */
+/* --- Footer --- */
 .footer {
   background: #050505;
   padding: 40px 0;
@@ -627,7 +604,6 @@ button[type="submit"]:hover {
       display: none;
   }
   
-  /* Fix logo size on mobile */
   .nav-left .logo-name {
       height: 40px; 
   }
@@ -668,40 +644,29 @@ button[type="submit"]:hover {
   }
 }
 
-/* --- Global Section Titles (Fixes the Long Line) --- */
+/* --- Global Section Titles --- */
 .section-title {
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 40px;
   text-transform: uppercase;
   font-weight: 700;
-  
-  /* THE FIX: Makes the box (and the border) shrink to fit the text */
   width: fit-content; 
-  display: block; /* Ensures it sits on its own line */
-  
-  /* The Line Styling (Matches your Skills section) */
-  border-bottom: 3px solid #333; /* Dark Grey Line */
-  padding-bottom: 10px; /* Space between text and line */
+  display: block;
+  border-bottom: 3px solid #333; 
+  padding-bottom: 10px; 
 }
 
-/* Optional: Make the first letter Pink (like in your screenshots) */
 .section-title::first-letter {
   color: var(--primary-color);
 }
-
-/* --- MENU ICON CONTROL (The Fix) --- */
 
 /* 1. On Desktop/Laptop: HIDE the icon */
 .menu-icon {
   display: none;
 }
 
-/* =========================================
-   PREMIUM FLOATING NAVBAR (Restored)
-   ========================================= */
-
-/* --- 1. The Floating Glass Bar --- */
+/* --- The Floating Glass Bar --- */
 .navbar {
   position: fixed;
   z-index: 999;
@@ -718,10 +683,6 @@ button[type="submit"]:hover {
   background: rgba(10, 10, 10, 0.7); 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  
-  /* BORDER RADIUS FIX: */
-  /* 100px forces the ends to be perfectly round (The Pill Shape) */
-  /* If you want a rectangle with soft corners, change this to 20px */
   border-radius: 100px; 
   
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -736,17 +697,15 @@ button[type="submit"]:hover {
   align-items: center;
 }
 
-/* --- 2. The Signature Logo (Updated Font) --- */
 .nav-logo h1 {
-  /* This uses the new elegant signature font */
   font-family: 'Great Vibes', cursive !important; 
   
-  font-size: 2.5rem; /* Increased size slightly for this font */
+  font-size: 2.5rem;
   margin: 0;
   cursor: pointer;
   color: #fff;
-  letter-spacing: 2px; /* Adds space between cursive letters */
-  font-weight: normal; /* Signature fonts look better not bold */
+  letter-spacing: 2px; 
+  font-weight: normal; 
   
   /* Neon Blue Glow */
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.8),
@@ -758,7 +717,7 @@ button[type="submit"]:hover {
 .nav-logo h1:hover {
   transform: scale(1.05);
 }
-/* --- 3. Desktop Menu Links --- */
+/* --- Desktop Menu Links --- */
 .nav-menu-desktop {
   display: flex;
   gap: 30px;
@@ -768,7 +727,6 @@ button[type="submit"]:hover {
 }
 
 .nav-menu-desktop a {
-  /* 1. Normal State: Dull White/Grey */
   color: rgba(255, 255, 255, 0.6); 
   
   font-size: 0.9rem;
@@ -781,13 +739,11 @@ button[type="submit"]:hover {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* 2. Hover State: Bright White */
 .nav-menu-desktop a:hover {
   color: #fff; /* Bright White */
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-/* 3. Active State: Pink Glow (Kept exactly as you liked it) */
 .nav-menu-desktop a.active {
   color: var(--primary-color) !important; /* Pink Text */
   text-shadow: 0 0 10px var(--primary-color);
@@ -816,12 +772,10 @@ button[type="submit"]:hover {
 .nav-overlay { display: none; }
 
 
-/* =========================================
-   MOBILE RESPONSIVENESS (Optimized Sizes & Smart Hide)
-   ========================================= */
+/* --- MOBILE RESPONSIVENESS (Optimized Sizes & Smart Hide) --- */
 @media (max-width: 768px) {
   
-  /* 1. Navbar: Fixed Top Bar (Smart Hide) */
+  /* Top Bar (Smart Hide) */
   .navbar {
     top: 0 !important;
     left: 0 !important;
@@ -847,9 +801,8 @@ button[type="submit"]:hover {
     padding: 0 20px;
   }
 
-  /* 3. Logo: Smaller Size */
   .nav-logo h1 {
-    font-size: 1.6rem !important; /* Reduced from 2.5rem */
+    font-size: 1.6rem !important; 
   }
 
   /* 4. Hide Desktop Menu */
@@ -858,13 +811,13 @@ button[type="submit"]:hover {
   /* 5. Hamburger Icon */
   .nav-icon {
     display: block !important;
-    font-size: 1.4rem; /* Smaller icon */
+    font-size: 1.4rem; 
     color: #fff;
     cursor: pointer;
     z-index: 2001; 
   }
 
-  /* 6. Mobile Overlay */
+  /* Mobile Overlay */
   .nav-overlay {
     display: flex !important;
     position: fixed;
@@ -881,11 +834,11 @@ button[type="submit"]:hover {
 
   .nav-overlay.active { opacity: 1; visibility: visible; }
   
-  /* 7. Mobile Links: Medium/Default App Size */
+  /* Mobile Links */
   .nav-menu-mobile {
     display: flex; 
     flex-direction: column; 
-    gap: 30px; /* Tighter spacing */
+    gap: 30px; 
     list-style: none; 
     text-align: center; 
     padding: 0;
@@ -893,85 +846,75 @@ button[type="submit"]:hover {
   
   .nav-menu-mobile a {
     color: #fff; 
-    font-size: 1.2rem !important; /* FIXED: Normal App Size (was too big) */
+    font-size: 1.2rem !important; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
     font-weight: 500;
-    padding: 10px; /* Make tap area good */
+    padding: 10px; 
   }
 
-  /* 8. Fix General Content Sizes on Mobile */
   .hero-title, h1 {
-    font-size: 2rem !important; /* Fix big Hero text */
+    font-size: 2rem !important; 
   }
   .section-title {
     font-size: 1.8rem !important; /* Fix big Section headers */
   }
 
-  /* =========================
-     MOBILE FOOTER FIX
-     ========================= */
+  /* --- MOBILE FOOTER --- */
   footer {
-    padding: 30px 20px !important; /* Reduce the huge vertical gap */
+    padding: 30px 20px !important; 
     text-align: center !important;
   }
 
-  /* 1. Shrink the Social Icons */
+  /* Shrink the Social Icons */
   footer .social-icons a, 
   footer a i { 
-    font-size: 1.3rem !important; /* Standard mobile icon size (was likely 2rem+) */
-    margin: 0 12px !important;    /* Tighter spacing between icons */
+    font-size: 1.3rem !important; 
+    margin: 0 12px !important;    
   }
 
-  /* 2. Shrink the "Made with Love" Text */
   footer p {
-    font-size: 0.85rem !important; /* Professional "caption" size */
-    margin-top: 15px !important;   /* Pull text closer to icons */
-    color: #888 !important;        /* slightly dimmer text looks more premium */
+    font-size: 0.85rem !important; 
+    margin-top: 15px !important;   
+    color: #888 !important;       
   }
   
-  /* 3. Ensure the Heart is visible but small */
   footer p span {
     font-size: 0.85rem !important;
   }
 
-  /* =========================
-     HEADER SECTION FIX (Text Top, Code Bottom)
-     ========================= */
+  /* --- HEADER SECTION --- */
   
-  /* 1. Target the <header id="home"> container */
   header#home {
     display: flex !important;
-    flex-direction: column !important; /* Stacks items vertically */
+    flex-direction: column !important; 
     justify-content: center !important;
     align-items: center !important;
-    padding-top: 120px !important; /* Push down to clear the Navbar */
-    height: auto !important;       /* Allow height to grow */
-    min-height: 100vh;             /* Ensure it fills the screen */
+    padding-top: 120px !important; 
+    height: auto !important;       
+    min-height: 100vh;             
   }
 
-  /* 2. Target the Text Div (Force it UP) */
   .header-text {
-    order: 1 !important;           /* Priority #1 (Top) */
-    text-align: center !important; /* Center the text */
+    order: 1 !important;           
+    text-align: center !important; 
     width: 100% !important;
-    margin-bottom: 50px !important; /* Gap between Text and Code Window */
-    padding: 0 20px !important;    /* Prevent text hitting edges */
+    margin-bottom: 50px !important; 
+    padding: 0 20px !important;    
   }
 
-  /* 3. Target the Code Window Div (Force it DOWN) */
   .header-visual {
-    order: 2 !important;           /* Priority #2 (Bottom) */
+    order: 2 !important;           
     width: 100% !important;
     display: flex !important;
-    justify-content: center !important; /* Center the window horizontally */
-    margin-bottom: 50px !important; /* Space at the bottom */
+    justify-content: center !important; 
+    margin-bottom: 50px !important; 
   }
 
-  /* 4. Resize the Code Window for Mobile */
+  /* Resize the Code Window for Mobile */
   .code-window {
-    width: 90% !important;         /* Fit on small screens */
-    max-width: 350px !important;   /* Don't let it get huge */
-    font-size: 0.85rem !important; /* Slightly smaller text inside window */
+    width: 90% !important;         
+    max-width: 350px !important;   
+    font-size: 0.85rem !important; 
   }
 }
