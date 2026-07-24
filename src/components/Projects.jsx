@@ -6,19 +6,19 @@ const Projects = () => {
       title: "Portfolio Website",
       desc: "A high-performance personal portfolio built with React and interactive particle physics. Features a responsive glassmorphism design and custom animations.",
       tech: ["React", "CSS3", "HTML5"],
-      link: "https://github.com/Shuklaarpitt/portfolio"
+      link: "https://my-portfolio-wheat-mu.vercel.app/"
     },
     {
       title: "Artist Home",
       desc: "Its a platform where artists can showcase there work and get to reach a wider audience from the three gerne Music, Art & Craft and Writting.",
-      tech: ["Angular", "Bootstrap", "TypeScript"],
-      link: "https://github.com/Shuklaarpitt/artist-home"
+      tech: ["React", "Tailwind CSS", "PHP"],
+      link: "https://artist-home.vercel.app/"
     },
     {
-      title: "Coming Soon App",
-      desc: "Please stay tuned! More exciting projects are on the way.",
-      tech: [],
-      link: "https://github.com/Shuklaarpitt"
+      title: "Employee Management System",
+      desc: "A web application that allows users to manage employee records, including adding, updating, and deleting employee information. Built with a focus on user-friendly interface and efficient data management.",
+      tech: ["React", "Tailwind CSS"],
+      link: "https://github.com/Shuklaarpitt/Employe-Management-System"
     }
   ];
 
